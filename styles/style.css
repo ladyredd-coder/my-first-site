@@ -1,0 +1,9 @@
+/* Responsive Profile Picture - Pro Method */
+.profile-pic {
+    width: 100%;             /* Scales down smoothly on mobile screens */
+    max-width: 250px;        /* Prevents it from getting too big on desktops */
+    height: auto;            /* Keeps the height and width completely proportional */
+    display: block;          /* Removes any weird extra bottom whitespace spacing */
+    margin: 20px 0;          /* Adds nice spacing above and below the picture */
+    border-radius: 8px;      /* Gives the image elegant, softly rounded corners */
+}
