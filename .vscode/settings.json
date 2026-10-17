@@ -7,5 +7,6 @@
         "latex",
         "plaintext",
         "html"
-    ]
+    ],
+    "geminicodeassist.outlines.automaticOutlineGeneration": true
 }
