@@ -10,7 +10,7 @@ This is my site for DEV.140 Web Development at Campus, where I am working toward
 - A wireframe of all three pages: images/my_first_site_wireframe.png
 - CSS in styles/style.css with type, class, and ID selectors
 - A color palette of purple (#241773), gold (#9E7C0C), and light (#F7F7FB)
-- Google Sans Flex for headings and Arial for body text
+- Google Sans Flex for headings and Inter for body text
 - The box model (padding, border, and margin) on the header, footer, and highlighted sections
 
 ## What is coming
