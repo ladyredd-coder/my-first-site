@@ -7,37 +7,41 @@
   width: 100%;
   max-width: 250px;
   height: auto;
-  margin-bottom: 16px;     /* Gives the image elegant, softly rounded corners */
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 body {
-  background-color: #F7F7FB;
+  background-color: #f7f7fb;
   color: #241773;
   font-family: "Inter", sans-serif;
 }
 
 h1 {
-  color: #9E7C0C;
+  color: #9e7c0c;
 }
 
 .topic {
   font-size: 20px;
 }
-
-#welcome, #intro {
-  background-color: #EEEAF8;
-  border: 2px solid #9E7C0C;
+#welcome,
+#intro,
+#contact {
+  background-color: #eeeaf8;
+  border: 2px solid #9e7c0c;
   padding: 24px;
   margin-bottom: 24px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Google Sans Flex", sans-serif;
 }
 
 header {
   padding: 24px;
-  border-bottom: 4px solid #9E7C0C;
+  border-bottom: 4px solid #9e7c0c;
   margin-bottom: 32px;
 }
 
@@ -76,8 +80,8 @@ img {
 }
 
 .focus li {
-  background-color: #EEEAF8;
-  border: 2px solid #9E7C0C;
+  background-color: #eeeaf8;
+  border: 2px solid #9e7c0c;
   padding: 24px;
 }
 
@@ -94,6 +98,63 @@ img {
 }
 
 a:focus-visible {
-  outline: 3px solid #9E7C0C;
+  outline: 3px solid #9e7c0c;
+  outline-offset: 4px;
+}
+
+form {
+  max-width: 600px;
+}
+
+.field {
+  margin-bottom: 24px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #241773;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #241773;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+.field textarea {
+  min-height: 128px;
+  resize: vertical; 
+}
+fieldset {
+  border: 2px solid #241773;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+fieldset label {
+  margin-right: 16px;
+}
+
+button {
+  background-color: #241773;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid #9e7c0c;
   outline-offset: 4px;
 }
