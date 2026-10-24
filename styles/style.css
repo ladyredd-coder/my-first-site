@@ -4,20 +4,16 @@
 
 /* Responsive Profile Picture - Pro Method */
 .profile-pic {
-    width: 100%;             /* Scales down smoothly on mobile screens */
-    max-width: 250px;        /* Prevents it from getting too big on desktops */
-    height: auto;            /* Keeps the height and width completely proportional */
-    display: block;          /* Removes any weird extra bottom whitespace spacing */
-    margin: 20px 0;          /* Adds nice spacing above and below the picture */
-    border-radius: 8px;      /* Gives the image elegant, softly rounded corners */
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 16px;     /* Gives the image elegant, softly rounded corners */
 }
 
 body {
   background-color: #F7F7FB;
   color: #241773;
   font-family: "Inter", sans-serif;
-  overflow-x: hidden;
-  max-width: 100%;
 }
 
 h1 {
@@ -66,7 +62,7 @@ nav ul {
   padding: 0 24px;
 }
 
-img, video {
+img {
   max-width: 100%;
   height: auto;
 }
