@@ -61,8 +61,6 @@ main {
 
 a {
   color: #241773;
-<<<<<<< Updated upstream
-=======
 }
 
 nav ul {
@@ -115,5 +113,4 @@ a:focus-visible {
 img, video {
   max-width: 100%;
   height: auto;
->>>>>>> Stashed changes
 }
