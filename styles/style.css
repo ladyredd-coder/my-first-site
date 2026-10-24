@@ -2,20 +2,19 @@
   box-sizing: border-box;
 }
 
-/* Responsive Profile Picture - Pro Method */
 .profile-pic {
-    width: 100%;             /* Scales down smoothly on mobile screens */
-    max-width: 250px;        /* Prevents it from getting too big on desktops */
-    height: auto;            /* Keeps the height and width completely proportional */
-    display: block;          /* Removes any weird extra bottom whitespace spacing */
-    margin: 20px 0;          /* Adds nice spacing above and below the picture */
-    border-radius: 8px;      /* Gives the image elegant, softly rounded corners */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 16px;
 }
 
 body {
   background-color: #F7F7FB;
   color: #241773;
-  font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 h1 {
@@ -55,4 +54,51 @@ main {
 
 a {
   color: #241773;
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0 24px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.focus {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.focus li {
+  background-color: #EEEAF8;
+  border: 2px solid #9E7C0C;
+  padding: 24px;
+}
+
+@media (min-width: 768px) {
+  .focus {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .focus {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
 }
