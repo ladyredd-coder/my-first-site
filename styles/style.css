@@ -15,13 +15,9 @@
 body {
   background-color: #F7F7FB;
   color: #241773;
-<<<<<<< Updated upstream
-  font-family: Arial, sans-serif;
-=======
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
   max-width: 100%;
->>>>>>> Stashed changes
 }
 
 h1 {
