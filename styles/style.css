@@ -15,7 +15,13 @@
 body {
   background-color: #F7F7FB;
   color: #241773;
+<<<<<<< Updated upstream
   font-family: Arial, sans-serif;
+=======
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
+>>>>>>> Stashed changes
 }
 
 h1 {
@@ -55,4 +61,59 @@ main {
 
 a {
   color: #241773;
+<<<<<<< Updated upstream
+=======
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0 24px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.focus {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.focus li {
+  background-color: #EEEAF8;
+  border: 2px solid #9E7C0C;
+  padding: 24px;
+}
+
+@media (min-width: 768px) {
+  .focus {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .focus {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+a:focus-visible {
+  outline: 3px solid #9E7C0C;
+  outline-offset: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+>>>>>>> Stashed changes
 }
