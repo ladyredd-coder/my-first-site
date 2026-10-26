@@ -26,7 +26,8 @@ h1 {
 }
 #welcome,
 #intro,
-#contact {
+#contact,
+.card {
   background-color: #eeeaf8;
   border: 2px solid #9e7c0c;
   padding: 24px;
@@ -157,4 +158,31 @@ textarea:focus-visible,
 button:focus-visible {
   outline: 3px solid #9e7c0c;
   outline-offset: 4px;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #intro,
+  #contact {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-layout {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #contact {
+    grid-column: auto;
+  }
 }
