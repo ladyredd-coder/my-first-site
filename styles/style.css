@@ -138,7 +138,8 @@ fieldset {
   margin-bottom: 24px;
 }
 
-fieldset label {
+.choice {
+  display: inline-block;
   margin-right: 16px;
 }
 
@@ -185,4 +186,9 @@ button:focus-visible {
   #contact {
     grid-column: auto;
   }
+}
+
+#welcome p,
+#intro p {
+  max-width: 700px;
 }
