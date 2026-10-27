@@ -28,6 +28,9 @@ h1 {
 #intro,
 #contact,
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: #eeeaf8;
   border: 2px solid #9e7c0c;
   padding: 24px;
@@ -41,12 +44,18 @@ h3 {
 }
 
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 24px;
   border-bottom: 4px solid #9e7c0c;
   margin-bottom: 32px;
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 16px 24px;
   border-top: 1px solid #241773;
   margin-top: 32px;
@@ -62,6 +71,9 @@ a {
 
 nav ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 24px;
   list-style: none;
   padding: 0 24px;
@@ -129,7 +141,7 @@ form {
 }
 .field textarea {
   min-height: 128px;
-  resize: vertical; 
+  resize: vertical;
 }
 fieldset {
   border: 2px solid #241773;
@@ -161,6 +173,7 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
+.two-column-grid,
 .about-layout {
   display: grid;
   grid-template-columns: 1fr;
