@@ -1,3 +1,12 @@
+   :root {
+     --primary: #241773;
+     --accent: #9e7c0c;
+     --neutral: #f7f7fb;
+     --surface: #eeeaf8;
+     --white: #ffffff;
+     --error: #b3261e;
+   }
+
 * {
   box-sizing: border-box;
 }
@@ -11,31 +20,31 @@
   margin-bottom: 16px;
 }
 
-body {
-  background-color: #f7f7fb;
-  color: #241773;
-  font-family: "Inter", sans-serif;
-}
+   body {
+     background-color: var(--neutral);
+     color: var(--primary);
+     font-family: "Inter", sans-serif;
+   }
 
-h1 {
-  color: #9e7c0c;
-}
+   h1 {
+     color: var(--accent);
+   }
 
 .topic {
   font-size: 20px;
 }
-#welcome,
-#intro,
-#contact,
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: #eeeaf8;
-  border: 2px solid #9e7c0c;
-  padding: 24px;
-  margin-bottom: 24px;
-}
+   #welcome,
+   #intro,
+   #contact,
+   .card {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     background-color: var(--surface);
+     border: 2px solid var(--accent);
+     padding: 24px;
+     margin-bottom: 24px;
+   }
 
 h1,
 h2,
@@ -43,21 +52,21 @@ h3 {
   font-family: "Google Sans Flex", sans-serif;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
-  border-bottom: 4px solid #9e7c0c;
-  margin-bottom: 32px;
-}
+   header {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 24px;
+     border-bottom: 4px solid var(--accent);
+     margin-bottom: 32px;
+   }
 
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 16px 24px;
-  border-top: 1px solid #241773;
+  border-top: 1px solid var(--primary);
   margin-top: 32px;
 }
 
@@ -66,7 +75,7 @@ main {
 }
 
 a {
-  color: #241773;
+  color: var(--primary);
 }
 
 nav ul {
@@ -93,8 +102,8 @@ img {
 }
 
 .focus li {
-  background-color: #eeeaf8;
-  border: 2px solid #9e7c0c;
+  background-color: var(--surface);
+  border: 2px solid var(--accent);
   padding: 24px;
 }
 
@@ -111,7 +120,7 @@ img {
 }
 
 a:focus-visible {
-  outline: 3px solid #9e7c0c;
+  outline: 3px solid var(--accent);
   outline-offset: 4px;
 }
 
@@ -132,10 +141,10 @@ form {
 .field textarea {
   width: 100%;
   padding: 8px;
-  border: 2px solid #241773;
+  border: 2px solid var(--primary);
   border-radius: 8px;
-  background-color: #ffffff;
-  color: #241773;
+  background-color: var(--white);
+  color: var(--primary);
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
@@ -144,7 +153,7 @@ form {
   resize: vertical;
 }
 fieldset {
-  border: 2px solid #241773;
+  border: 2px solid var(--primary);
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 24px;
@@ -156,8 +165,8 @@ fieldset {
 }
 
 button {
-  background-color: #241773;
-  color: #ffffff;
+  background-color: var(--primary);
+  color: var(--white);
   font-family: "Inter", sans-serif;
   font-size: 16px;
   padding: 16px 24px;
@@ -169,7 +178,7 @@ button {
 input:focus-visible,
 textarea:focus-visible,
 button:focus-visible {
-  outline: 3px solid #9e7c0c;
+  outline: 3px solid var(--accent);
   outline-offset: 4px;
 }
 
@@ -204,4 +213,22 @@ button:focus-visible {
 #welcome p,
 #intro p {
   max-width: 700px;
+}
+
+.error {
+  display: none;
+  margin: 8px 0 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--error);
+}
+
+.field input:user-invalid + .error,
+.field textarea:user-invalid + .error {
+  display: block;
+}
+
+.field input:user-invalid,
+.field textarea:user-invalid {
+  border-color: var(--error);
 }

@@ -82,27 +82,17 @@
       <section id="contact">
         <h2>Contact Me</h2>
         <form>
-          <div class="field">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              autocomplete="name"
-              required
-            />
-          </div>
+             <div class="field">
+     <label for="name">Name</label>
+     <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error" />
+     <p class="error" id="name-error">Please enter your name.</p>
+   </div>
 
-          <div class="field">
-            <label for="email">Email address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              required
-            />
-          </div>
+             <div class="field">
+     <label for="email">Email address</label>
+     <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error" />
+     <p class="error" id="email-error">Please enter an email like name@example.com.</p>
+   </div>
 
           <fieldset>
             <legend>When is the best time to reply?</legend>
@@ -135,10 +125,11 @@
             </div>
           </fieldset>
 
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
+             <div class="field">
+     <label for="message">Message</label>
+     <textarea id="message" name="message" required aria-describedby="message-error"></textarea>
+     <p class="error" id="message-error">Please write a message.</p>
+   </div>
 
           <button type="submit">Send</button>
         </form>
