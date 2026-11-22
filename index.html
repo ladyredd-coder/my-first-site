@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jalisa Franklin | Home</title>
-    <meta name="description" content="Jalisa Franklin's portfolio: web development projects, goals, and background.">
+    <meta
+      name="description"
+      content="Jalisa Franklin's portfolio: web development projects, goals, and background."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +26,10 @@
 
     <!-- Navigation Section: Links to all three pages of your website -->
     <nav>
-      <ul>
+      <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+        ☰ Menu
+      </button>
+      <ul id="nav-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
@@ -43,7 +49,6 @@
         </p>
       </section>
 
-  
       <div class="two-column-grid">
         <section class="card">
           <h2>About Me</h2>
@@ -92,5 +97,7 @@
     <footer>
       <p>&copy; 2026 Jalisa Franklin. All Rights Reserved.</p>
     </footer>
+
+    <script src="scripts/script.js"></script>
   </body>
 </html>

@@ -232,3 +232,48 @@ button:focus-visible {
 .field textarea:user-invalid {
   border-color: var(--error);
 }
+
+/* Mobile Menu Toggle */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+#menu-toggle {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 767px) {
+  #nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #nav-list.open {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  #menu-toggle {
+    display: none;
+  }
+}
+
+.error.show-error {
+  display: block;
+}
+
+.field input.input-invalid,
+.field textarea.input-invalid {
+  border-color: var(--error);
+}
+
+#form-status {
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--primary);
+}

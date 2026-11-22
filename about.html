@@ -16,13 +16,18 @@
     />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
+
   <body>
     <header>
       <h1>Hello, I'm Jalisa</h1>
     </header>
 
+    <!-- Navigation Section: Links to all three pages of your website -->
     <nav>
-      <ul>
+      <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+        ☰ Menu
+      </button>
+      <ul id="nav-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
@@ -79,59 +84,30 @@
           with robust tech support infrastructure.
         </p>
       </section>
-      <section id="contact">
+
+      <section id="contact" class="card">
         <h2>Contact Me</h2>
-        <form>
-             <div class="field">
-     <label for="name">Name</label>
-     <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error" />
-     <p class="error" id="name-error">Please enter your name.</p>
-   </div>
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <p class="error" id="name-error">Please enter your name.</p>
+          </div>
 
-             <div class="field">
-     <label for="email">Email address</label>
-     <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error" />
-     <p class="error" id="email-error">Please enter an email like name@example.com.</p>
-   </div>
+          <div class="field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <p class="error" id="email-error">Please enter a valid email address.</p>
+          </div>
 
-          <fieldset>
-            <legend>When is the best time to reply?</legend>
-            <div class="choice">
-              <input
-                type="radio"
-                id="time-morning"
-                name="time"
-                value="morning"
-              />
-              <label for="time-morning">Morning</label>
-            </div>
-            <div class="choice">
-              <input
-                type="radio"
-                id="time-afternoon"
-                name="time"
-                value="afternoon"
-              />
-              <label for="time-afternoon">Afternoon</label>
-            </div>
-            <div class="choice">
-              <input
-                type="radio"
-                id="time-evening"
-                name="time"
-                value="evening"
-              />
-              <label for="time-evening">Evening</label>
-            </div>
-          </fieldset>
+          <div class="field">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <p class="error" id="message-error">Please enter a message (at least 10 characters).</p>
+          </div>
 
-             <div class="field">
-     <label for="message">Message</label>
-     <textarea id="message" name="message" required aria-describedby="message-error"></textarea>
-     <p class="error" id="message-error">Please write a message.</p>
-   </div>
-
-          <button type="submit">Send</button>
+          <button type="submit">Send Message</button>
+          <p id="form-status" aria-live="polite"></p>
         </form>
       </section>
     </main>
@@ -139,5 +115,7 @@
     <footer>
       <p>&copy; 2026 Jalisa Franklin. All Rights Reserved.</p>
     </footer>
+
+    <script src="scripts/script.js"></script>
   </body>
 </html>
