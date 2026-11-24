@@ -216,20 +216,14 @@ button:focus-visible {
 }
 
 .error {
-  display: none;
   margin: 8px 0 0;
   font-size: 16px;
   font-weight: 600;
   color: var(--error);
 }
 
-.field input:user-invalid + .error,
-.field textarea:user-invalid + .error {
-  display: block;
-}
-
-.field input:user-invalid,
-.field textarea:user-invalid {
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
   border-color: var(--error);
 }
 
@@ -261,15 +255,6 @@ nav {
   #menu-toggle {
     display: none;
   }
-}
-
-.error.show-error {
-  display: block;
-}
-
-.field input.input-invalid,
-.field textarea.input-invalid {
-  border-color: var(--error);
 }
 
 #form-status {

@@ -11,60 +11,74 @@ if (menuToggle && navList) {
 }
 
 // 2. Contact Form Checker
+
+// Put a message in a box's error paragraph (its id plus "-error")
+function showError(field, message) {
+  const error = document.querySelector("#" + field.id + "-error");
+  error.textContent = message;
+  field.setAttribute("aria-invalid", "true");
+}
+
+// Empty the message and mark the box as okay again
+function clearError(field) {
+  const error = document.querySelector("#" + field.id + "-error");
+  error.textContent = "";
+  field.setAttribute("aria-invalid", "false");
+}
+
 const contactForm = document.querySelector("#contact-form");
 
 if (contactForm) {
   const nameInput = document.querySelector("#name");
   const emailInput = document.querySelector("#email");
   const messageInput = document.querySelector("#message");
-
-  const nameError = document.querySelector("#name-error");
-  const emailError = document.querySelector("#email-error");
-  const messageError = document.querySelector("#message-error");
   const formStatus = document.querySelector("#form-status");
+  const requiredFields = document.querySelectorAll("#contact-form [required]");
+
+  // something @ something . something
+  const emailPattern = /^\S+@\S+\.\S+$/;
 
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    let isValid = true;
+    formStatus.textContent = "";
+    let allGood = true;
 
     // Check Name
     if (nameInput.value.trim() === "") {
-      nameError.classList.add("show-error");
-      nameInput.classList.add("input-invalid");
-      isValid = false;
-    } else {
-      nameError.classList.remove("show-error");
-      nameInput.classList.remove("input-invalid");
+      showError(nameInput, "Please enter your name.");
+      allGood = false;
     }
 
-    // Check Email
-    const emailVal = emailInput.value.trim();
-    if (emailVal === "" || !emailVal.includes("@") || !emailVal.includes(".")) {
-      emailError.classList.add("show-error");
-      emailInput.classList.add("input-invalid");
-      isValid = false;
-    } else {
-      emailError.classList.remove("show-error");
-      emailInput.classList.remove("input-invalid");
+    // Check Email: is it there, then is it the right shape
+    const emailValue = emailInput.value.trim();
+    if (emailValue === "") {
+      showError(emailInput, "Please enter your email address.");
+      allGood = false;
+    } else if (!emailPattern.test(emailValue)) {
+      showError(emailInput, "That doesn't look like an email address.");
+      allGood = false;
     }
 
     // Check Message
     if (messageInput.value.trim().length < 10) {
-      messageError.classList.add("show-error");
-      messageInput.classList.add("input-invalid");
-      isValid = false;
-    } else {
-      messageError.classList.remove("show-error");
-      messageInput.classList.remove("input-invalid");
+      showError(messageInput, "Please enter a message (at least 10 characters).");
+      allGood = false;
     }
 
     // Final Result
-    if (isValid) {
+    if (allGood) {
       formStatus.textContent =
         "Thanks, " + nameInput.value.trim() + "! Your message has been received.";
-      contactForm.reset();
-    } else {
-      formStatus.textContent = "";
+      nameInput.value = "";
+      emailInput.value = "";
+      messageInput.value = "";
     }
+  });
+
+  // Typing in a box clears that box's error
+  requiredFields.forEach(function (field) {
+    field.addEventListener("input", function () {
+      clearError(field);
+    });
   });
 }
