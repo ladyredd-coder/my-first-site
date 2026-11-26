@@ -18,6 +18,7 @@ This is my site for **DEV.140 Web Development at Campus**, where I am working to
 - **JavaScript** in scripts/script.js, a separate file linked at the bottom of every page
 - A **menu button** that opens and closes the navigation on small screens, using `querySelector`, `addEventListener`, `classList.toggle`, and `aria-expanded`
 - **Contact form validation** that stops an empty or invalid submit with `preventDefault`, writes error messages into the page instead of using `alert()`, and clears each error as the visitor types
+- **Live GitHub Profile card (`fetch` and JSON)** on the Projects page that pulls live repository data from the GitHub REST API (`https://api.github.com/users/ladyredd-coder`) with `.catch()` error handling
 
 ## Accessibility fixes
 
@@ -46,7 +47,7 @@ WAVE shows 0 errors and 0 contrast errors on my Home, Projects, and About pages,
 
 ## What is coming
 
-**Forms, live data (fetch and JSON), and my capstone portfolio** as the course goes on
+**Final polish, expanded project showcases, and completing my capstone portfolio** as the course wraps up
 
 ## Live site
 
