@@ -14,7 +14,10 @@ This is my site for **DEV.140 Web Development at Campus**, where I am working to
 - The box model (padding, border, and margin) on the header, footer, and highlighted sections
 - **Flexbox** layout for navigation, header, and footer centering
 - Mobile-first **CSS Grid** with 2-column and 3-column media queries for responsive card layouts across mobile, tablet, and desktop screens
-- An **accessible contact form** on the About page with linked labels, a fieldset and legend, required fields, and visible error messages
+- An **accessible contact form** on the About page with linked labels, required fields, and visible error messages
+- **JavaScript** in scripts/script.js, a separate file linked at the bottom of every page
+- A **menu button** that opens and closes the navigation on small screens, using `querySelector`, `addEventListener`, `classList.toggle`, and `aria-expanded`
+- **Contact form validation** that stops an empty or invalid submit with `preventDefault`, writes error messages into the page instead of using `alert()`, and clears each error as the visitor types
 
 ## Accessibility fixes
 
@@ -43,7 +46,7 @@ WAVE shows 0 errors and 0 contrast errors on my Home, Projects, and About pages,
 
 ## What is coming
 
-**JavaScript** as the course goes on
+**Forms, live data (fetch and JSON), and my capstone portfolio** as the course goes on
 
 ## Live site
 

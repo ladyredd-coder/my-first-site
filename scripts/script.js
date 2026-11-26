@@ -88,3 +88,39 @@ if (contactForm) {
     });
   });
 }
+
+// 3. GitHub profile card: live data from the free GitHub API (optional bonus)
+const githubStatus = document.querySelector("#github-status");
+
+// Only run if this page has the card (it is only on projects.html)
+if (githubStatus) {
+  const githubUrl = "https://api.github.com/users/ladyredd-coder";
+
+  // fetch places the order and hands back a promise (the buzzer)
+  fetch(githubUrl)
+    .then(function (response) {
+      // The package arrived, but is it the right one? A 404 or 403 is not ok
+      if (!response.ok) {
+        throw new Error("Error " + response.status);
+      }
+      // Open the package so we can read what is inside
+      return response.json();
+    })
+    .then(function (data) {
+      // Dot paths: start at data, then open the drawer we want
+      githubStatus.textContent =
+        data.name +
+        " (" +
+        data.login +
+        ") has " +
+        data.public_repos +
+        " public repositories on GitHub.";
+    })
+    .catch(function (error) {
+      // The truck never arrived (no internet, bad address) or the package was wrong
+      githubStatus.textContent =
+        "Sorry, my GitHub information isn't available right now. (" +
+        error.message +
+        ")";
+    });
+}
