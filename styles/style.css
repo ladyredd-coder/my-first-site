@@ -262,3 +262,8 @@ nav {
   font-weight: 600;
   color: var(--primary);
 }
+
+#github-card {
+  align-self: start;
+  max-width: 240px;
+}
