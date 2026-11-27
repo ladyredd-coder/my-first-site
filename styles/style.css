@@ -265,5 +265,17 @@ nav {
 
 #github-card {
   align-self: start;
-  max-width: 240px;
+  width: 100%;
+  max-width: 185px;
+  min-height: 295px;
+  margin-top: 48px;
+}
+
+#github-card h2 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+
+#github-card p {
+  margin: 0 0 12px;
 }
