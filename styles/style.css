@@ -262,22 +262,3 @@ nav {
   font-weight: 600;
   color: var(--primary);
 }
-
-#github-card h2 {
-  font-size: 1rem;
-  margin: 0 0 8px;
-}
-
-#github-card p {
-  margin: 0 0 12px;
-}
-
-@media (min-width: 1200px) {
-  #github-card {
-    align-self: start;
-    width: 100%;
-    max-width: 185px;
-    min-height: 274px;
-    margin-top: 62px;
-  }
-}
